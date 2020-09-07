@@ -1,4 +1,4 @@
-# COMP4500
+# Algorithms and data structure
 
 Analysis of algorithms. Solution of summation & recurrence equations. Algorithm paradigms: divide-&-conquer, greedy algorithms, dynamic programming, backtracking, branch-&-bound. Advanced graph algorithms. Amortised analysis. Self-adjusting data structures. Complexity classes, NP-completeness. Approximation algorithms. Randomized algorithms.
 
