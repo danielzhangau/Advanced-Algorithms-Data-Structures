@@ -1,8 +1,9 @@
 # Algorithms and data structure
 
-Analysis of algorithms. Solution of summation & recurrence equations. Algorithm paradigms: divide-&-conquer, greedy algorithms, dynamic programming, backtracking, branch-&-bound. Advanced graph algorithms. Amortised analysis. Self-adjusting data structures. Complexity classes, NP-completeness. Approximation algorithms. Randomized algorithms.
+A number of general design paradigms, such as divide-and-conquer, play an important role in the development of algorithms. Familiarity with these paradigms can aid the programmer in the development of algorithms to solve new problems. 
+It is not enough just to derive an algorithm that solves a problem. If the algorithm is inefficient, it may be useless in practice. One can better appreciate an algorithm if one can analyse its use of resources, such as memory and computing time. Such analyses provide the basis for comparison of different algorithms to solve the same problem.
 
- what is covered:
+## What is covered:
 * ### Introduction and mathematical background: 
 Time and space complexity: the desire for an implementation independent measure; worst-case and average-case complexity.
 Evaluating efficiency: rate of growth, asymptotic time complexity; notation.
@@ -32,3 +33,11 @@ Decision problems; tractable and intractable problems; Polynomial time; the clas
 
 * ### Randomised algorithms: 
 probabilistic analysis, randomised quicksort
+
+## What I have learned:
+1.	Analyse, compare, and contrast algorithms and data structures by evaluating their time and space complexity.
+2.	Apply algorithm design paradigms to generate novel solutions.
+3.	Design abstract solutions based on graph algorithms, dynamic programming, and greedy methods.
+4.	Develop efficient implementations to abstract solutions.
+5.	Perform amortised analysis of data structures and algorithms.
+6	Explain the theory and relevance of theoretical complexity classes.
