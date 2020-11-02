@@ -15,7 +15,64 @@ public class DynamicTest {
         int[] minorServiceCapacity = {50,40,20,10};
         int expectedResult = 75;
 
-        Assert.assertEquals(Dynamic.optimalLossDynamic(hourlyVolume, fullServiceCapacity, regularServiceCapacity, minorServiceCapacity), expectedResult);
+        Assert.assertEquals(expectedResult, Dynamic.optimalLossDynamic(hourlyVolume, fullServiceCapacity, regularServiceCapacity, minorServiceCapacity));
+    }
+
+    @Test
+    public void exampleDynamicTestBoundary() {
+        int[] hourlyVolume =       {};
+        int[] fullServiceCapacity = {100,90,80,70,60,50,40,30,20,10};
+        int[] regularServiceCapacity = {70,50,40,30,20,10};
+        int[] minorServiceCapacity = {50,40,20,10};
+        int expectedResult = 0;
+
+        Assert.assertEquals(expectedResult, Dynamic.optimalLossDynamic(hourlyVolume, fullServiceCapacity, regularServiceCapacity, minorServiceCapacity));
+    }
+
+    @Test
+    public void exampleDynamicTest2() {
+        int[] hourlyVolume =       {70,40,90,10,5,100,40,20,50};
+        int[] fullServiceCapacity = {40,80,50,70,10,50,40,30,20,10};
+        int[] regularServiceCapacity = {70,50,40,30,20,10};
+        int[] minorServiceCapacity = {50,40,20,10};
+        int expectedResult = 135;
+
+        Assert.assertEquals(expectedResult, Dynamic
+            .optimalLossDynamic(hourlyVolume, fullServiceCapacity, regularServiceCapacity, minorServiceCapacity));
+    }
+
+    @Test
+    public void exampleDynamicTest3() {
+        int[] hourlyVolume =       {50,40,90,10,5,100,40,20,70};
+        int[] fullServiceCapacity = {100,90,80,70,60,50,40,30,20,10};
+        int[] regularServiceCapacity = {70,50,40,30,20,10};
+        int[] minorServiceCapacity = {50,40,20,10};
+        int expectedResult = 95;
+
+        Assert.assertEquals(expectedResult, Dynamic.optimalLossDynamic(hourlyVolume, fullServiceCapacity, regularServiceCapacity, minorServiceCapacity));
+    }
+
+    @Test
+    public void exampleDynamicTest4() {
+        int[] hourlyVolume =       {20,40,100,10,5,100,50,20,50,20,40};
+        int[] fullServiceCapacity = {90,65,20,30,50,50,30,30,20,10};
+        int[] regularServiceCapacity = {50,50,45,30,20,10};
+        int[] minorServiceCapacity = {60,30,20,20};
+        int expectedResult = 185;
+
+        Assert.assertEquals(expectedResult, Dynamic
+            .optimalLossDynamic(hourlyVolume, fullServiceCapacity, regularServiceCapacity, minorServiceCapacity));
+    }
+
+    @Test
+    public void exampleDynamicTest5() {
+        int[] hourlyVolume =       {20,40,100,10,5,100,50,20,50,20,40};
+        int[] fullServiceCapacity = {30,0,0,10};
+        int[] regularServiceCapacity = {0,20};
+        int[] minorServiceCapacity = {10};
+        int expectedResult = 375;
+
+        Assert.assertEquals(expectedResult, Dynamic.optimalLossDynamic(hourlyVolume, fullServiceCapacity, regularServiceCapacity, minorServiceCapacity));
     }
 
     @Test
@@ -37,10 +94,11 @@ public class DynamicTest {
                                        int[] minorServiceCapacity, int expectedResult) {
         Service[] actualServices = Dynamic.optimalServicesDynamic(hourlyVolume, fullServiceCapacity,
                 regularServiceCapacity, minorServiceCapacity);
-        //System.out.println(Arrays.toString(actualServices)); //print the result, uncomment to see the result
+        System.out.println(Arrays.toString(actualServices)); //print the result, uncomment to see the result
         checkSolutionValidity(actualServices, hourlyVolume);
         int solutionCost = getCost(hourlyVolume, fullServiceCapacity, regularServiceCapacity,
                 minorServiceCapacity, actualServices);
+        System.out.println(solutionCost); //print the result, uncomment to see the result
         Assert.assertEquals(expectedResult, solutionCost);
     }
 

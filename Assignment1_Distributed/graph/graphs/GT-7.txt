@@ -1,0 +1,23 @@
+digraph G {
+0 [fillcolor="white", style="filled", shape="Mrecord", label="{ 0 | 1/12 }"]
+1 [fillcolor="violet", style="filled", shape="Mrecord", label="{ 1 | 7/14 }"]
+2 [fillcolor="white", style="filled", shape="Mrecord", label="{ 2 | 5/6 }"]
+3 [fillcolor="white", style="filled", shape="Mrecord", label="{ 3 | 2/11 }"]
+4 [fillcolor="white", style="filled", shape="Mrecord", label="{ 4 | 3/10 }"]
+5 [fillcolor="white", style="filled", shape="Mrecord", label="{ 5 | 4/7 }"]
+6 [fillcolor="slategrey", style="filled", shape="Mrecord", label="{ 6 | 5/6 }"]
+7 [fillcolor="slategrey", style="filled", shape="Mrecord", label="{ 7 | 3/4 }"]
+8 [fillcolor="white", style="filled", shape="Mrecord", label="{ 8 | 8/9 }"]
+9 [fillcolor="slategrey", style="filled", shape="Mrecord", label="{ 9 | 1/2 }"]
+0 -> 5
+0 -> 3 [penwidth=5.0]
+2 -> 5
+3 -> 0
+3 -> 8
+4 -> 8 [penwidth=5.0]
+4 -> 3
+5 -> 4
+5 -> 0
+8 -> 9
+8 -> 4
+}
